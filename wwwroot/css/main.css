@@ -363,10 +363,10 @@ FIRST FOOTER CONTENT
 
 .social_info a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.200em;
-    line-height: 1.400em;
+    
     color: #fff;
     display: inline-block;
     margin: 0 auto;
@@ -774,7 +774,7 @@ MEDIA QUERIES TABLET
     }
 
     .social_info a {
-        font-size: 24.93px;
+        font-size: 16.93px;
     }
 
     .social_icons li a {
@@ -875,7 +875,7 @@ MEDIA QUERIE DESKTOP
     }
 
     .or_call .social_info a {
-        font-size: 24.93px;
+        font-size: 17.93px;
         display: inline-block;
         margin: 0 auto;
         width: auto;
@@ -898,4 +898,21 @@ MEDIA QUERIE DESKTOP
 
 .navbar-header a{
     font-size: 17px;
+}
+
+
+.popApp{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: transparent;
+    border: none;
+    z-index: 300000000000;
+
+}
+.popApp img{
+    width: 60px;
+    height: 60px;
 }
