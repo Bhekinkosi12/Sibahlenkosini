@@ -28,6 +28,14 @@ namespace Sibahlenkosini.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult OnWhatsapp()
+        {
+            var process = $"whataspp://send?phone=0825432455";
+            Process.Start(process);
+            return View("Index");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
