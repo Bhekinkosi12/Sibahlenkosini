@@ -89,9 +89,10 @@ p.desc-text{
     content: "\e603";
 }
 
-.carousel-slide{
+.carousel-slide {
     float: right !important;
-    margin-right: -15px;
+    margin-right: -25px;
+    margin-left: -25px;
 } 
 
 li.item{
@@ -915,4 +916,13 @@ MEDIA QUERIE DESKTOP
 .popApp img{
     width: 60px;
     height: 60px;
+}
+
+
+@media (max-width: 700px){
+
+    .hc{
+        margin-top: 10px;
+    }
+
 }
