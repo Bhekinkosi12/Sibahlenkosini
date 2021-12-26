@@ -918,11 +918,20 @@ MEDIA QUERIE DESKTOP
     height: 60px;
 }
 
+.it img{
+    height: 520px;
+    width: 100%;
+}
+
 
 @media (max-width: 700px){
 
     .hc{
         margin-top: 10px;
+    }
+    .it img {
+        height: 520px;
+        width: 100%;
     }
 
 }
