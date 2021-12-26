@@ -31,7 +31,7 @@ namespace Sibahlenkosini.Controllers
         [HttpPost]
         public IActionResult OnWhatsapp()
         {
-            var process = $"whataspp://send?phone=0825432455";
+            var process = $"whatsapp://send?phone=27825432455";
             Process.Start(process);
             return View("Index");
         }
