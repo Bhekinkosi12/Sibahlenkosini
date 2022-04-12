@@ -1050,3 +1050,12 @@ MEDIA QUERIE DESKTOP
 .mt-auto {
     margin-top: auto;
 }
+
+.PopupF{
+    position: fixed;
+    top: 30px;
+    left: 0px;
+
+    z-index: 99999999;
+    display: none;
+}

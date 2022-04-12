@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Sibahlenkosini.Services;
 
 namespace Sibahlenkosini.Controllers
 {
@@ -25,6 +26,17 @@ namespace Sibahlenkosini.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public async Task<ActionResult> Gallery()
+        {
+
+            FirebaseData data = new FirebaseData();
+            var items = await data.GetAllMedia();
+
+            ViewBag.Medias = items;
+
             return View();
         }
 

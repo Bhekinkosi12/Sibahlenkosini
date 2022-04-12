@@ -1,17 +1,23 @@
-﻿<div class="masonry">
+﻿@{
+   
+}
+
+<div class="masonry">
+    @foreach(var items in ViewBag.Medias){
+
   <div class="grid">
-    <img src="https://source.unsplash.com/random/1">
+    <img src="@items.Link" onclick="OnPopup(@items.Link)">
     <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
+      
       <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
+        <span class="grid__tag"></span>
       </div>
     </div>
   </div>
+    }
+
+
+  <!--
   <div class="grid">
     <img src="https://source.unsplash.com/random/2">
     <div class="grid__body">
@@ -25,134 +31,19 @@
       </div>
     </div>
   </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/3">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
+  -->
+</div>
+
+<div class="container-fluid PopupF" id="PopupF">
+
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-danger" onclick="OnClosePop()" >Close</button>
+            <img src="" id="popImg" style="width: 100%;" />
+
+        </div>
+
     </div>
-  </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/4">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
-    </div>
-  </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/5">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
-    </div>
-  </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/6">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
-    </div>
-  </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/7">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
-    </div>
-  </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/8">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
-    </div>
-  </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/9">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
-    </div>
-  </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/10">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
-    </div>
-  </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/11">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
-    </div>
-  </div>
-  <div class="grid">
-    <img src="https://source.unsplash.com/random/12">
-    <div class="grid__body">
-      <div class="relative">
-        <a class="grid__link" target="_blank" href="/" ></a>
-        <h1 class="grid__title">Title 1</h1>
-        <p class="grid__author">Mario Rossi</p>
-      </div>
-      <div class="mt-auto" >
-        <span class="grid__tag">#tag1</span>
-      </div>
-    </div>
-  </div>
+
+
 </div>

@@ -1,5 +1,23 @@
 
 
+var Popof = document.getElementById("#PopupF");
+var PopupIMG = document.getElementById("#popImg");
+
+function OnPopup(link) {
+
+	Popof.style.display = "initial";
+	PopupIMG.src = link;
+
+}
+
+function OnClosePop() {
+	Popof.style.display = "none";
+}
+
+
+
+
+
 	$(document).ready(function () {
 		$(document).on("scroll", onScroll);
  
