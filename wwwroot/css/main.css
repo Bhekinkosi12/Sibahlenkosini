@@ -911,12 +911,30 @@ MEDIA QUERIE DESKTOP
     background: transparent;
     border: none;
     z-index: 300000000000;
+    visibility: hidden;
 
 }
-.popApp img{
-    width: 60px;
-    height: 60px;
+.popAppa {
+   
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    background: transparent;
+    border: none;
+    z-index: 0900000000000;
 }
+
+    .popAppa img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .popApp img {
+        width: 60px;
+        height: 60px;
+    }
 
 .it img{
     height: 520px;
@@ -1058,4 +1076,44 @@ MEDIA QUERIE DESKTOP
 
     z-index: 99999999;
     display: none;
+    visibility: hidden;
 }
+
+.cart_Open{
+    margin-bottom: 20px; 
+}
+.cart_Open a{
+    background: #34f217;
+    padding: 16px;
+    color: #fff;
+    font-family: cursive;
+    text-decoration: none;
+
+}
+
+
+
+
+
+.SlideCards{
+    display: inline-flex;
+    overflow-x: scroll;
+    scrollbar-base-color: transparent;
+    margin: 13px;
+}
+
+.SlideCard {
+    width: 300px;
+    margin: 10px;
+}
+    .SlideCard img {
+        
+        height: 320px;
+        width: 100%;
+        margin-bottom: 9px;
+    }
+
+    .SlideCard p {
+        margin-bottom: 9px;
+        font-weight: 600;
+    }

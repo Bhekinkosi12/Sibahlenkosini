@@ -19,8 +19,11 @@ namespace Sibahlenkosini.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<ActionResult> Index()
         {
+            FirebaseData data = new FirebaseData();
+            var pro = await data.GetDataAsync();
+            ViewBag.Products = pro;
             return View();
         }
 
@@ -34,8 +37,10 @@ namespace Sibahlenkosini.Controllers
 
             FirebaseData data = new FirebaseData();
             var items = await data.GetAllMedia();
+           
 
             ViewBag.Medias = items;
+            
 
             return View();
         }

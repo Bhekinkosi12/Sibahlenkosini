@@ -1,6 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<a href="whatsapp://send?phone=27768103643">
+    
+<button class="popAppa" type="submit">
+
+   <img src="~/images/apps.png"  alt="app" />
+</button>
+</a>
 
 
 <a href="whatsapp://send?phone=27768103643">
@@ -11,8 +18,42 @@
 </button>
 </a>
 
+
+
     
    
+ <header>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand"  href="#"><img src="images/log.png"  />Sibahlenkosini</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav main-nav  clear navbar-right ">
+                            <li><a class="navactive color_animation" href="#top">WELCOME</a></li>
+                            <li><a class="color_animation" href="#story">ABOUT</a></li>
+                            <li><a class="color_animation" href="#pricing">PRICING</a></li>
+                            <li><a class="color_animation" href="#beer">DECOR</a></li>
+                            <li><a class="color_animation" href="#bread">TABLE</a></li>
+                            <li><a class="color_animation" href="#featured">FEATURED</a></li>
+                            <li><a class="color_animation" href="#reservation">RESERVATION</a></li>
+                            <li><a class="color_animation" href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
 
     
 <div id="top" class="starter_container bg" style="height: 100vh;">
@@ -161,45 +202,27 @@
     <div class="text-content container">
         <div class="container">
             <div class="row">
-                <div id="w">
-                    <ul id="filter-list" class="clearfix">
-                        <li class="filter" data-filter="all">All</li>
-                        <li class="filter" data-filter="breakfast">Decor</li>
-                        <li class="filter" data-filter="special">Special</li>
-                        <li class="filter" data-filter="desert">Cake</li>
-                        <li class="filter" data-filter="dinner">Outside</li>
-                    </ul><!-- end #filter-list -->
-                    <ul id="portfolio">
-                        <li class="item breakfast desert">
-                            <img src="images/cake1.jpg" style="height: 200px; width: 100%" alt="Food">
-                            <p class="item_p">Birthday Cake</p>
-                            <h2 class="white">R150+</h2>
-                        </li>
-                        <li class="item breakfast desert">
-                            <img src="images/cake2.jpg" style="height: 200px; width: 100%" alt="Food">
-                            <p class="item_p">Birthday Cake</p>
-                            <h2 class="white">R150+</h2>
-                        </li>
 
-                        <li class="item breakfast dinner">
-                            <img src="images/redCarpet.jpeg" style="height: 200px; width: 100%" alt="Food">
-                            <p class="item_p">Color Carpets</p>
-                            <h2 class="white">R400+</h2>
-                        </li>
-                        <li class="item special dinner">
-                            <img src="images/gazebo.jpeg" style="height: 200px; width: 100%" alt="Food">
-                            <p class="item_p">Gazebo</p>
-                            <h2 class="white">R300</h2>
-                        </li>
-                        <li class="item special dinner">
-                            <img src="images/chairs.jpeg" style="height: 200px; width: 100%" alt="Food">
-                            <p class="item_p">Chairs and Tables</p>
-                            <h2 class="white">R5+</h2>
-                        </li>
+                <div class="cart_Open">
+                    <a href="https://sibahleshop.asurewebsite.net" >Open Shop</a>
+                </div>
+                
+                <div class="SlideCards">
+                    @foreach(var i in ViewBag.Products){
 
-                      
-                    </ul>
-                </div><!-- end #w -->
+                    <div class="SlideCard">
+                        <img src="@i.Image" />
+                        <p>@i.Name</p>
+                       
+                    </div>
+                    }
+
+                    
+
+                 
+                </div>
+
+               
             </div>
         </div>
     </div>

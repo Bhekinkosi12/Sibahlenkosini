@@ -39,6 +39,26 @@ namespace Sibahlenkosini.Services
             }
         }
 
+        public async Task<List<Product>> GetDataAsync()
+        {
+            List<Product> products = new List<Product>();
+
+            try
+            {
+                var items = (await client.Child("Products").OnceAsync<Product>()).ToList();
+                foreach (var i in items)
+                {
+                    products.Add(i.Object);
+                }
+
+                return await Task.FromResult(products);
+            }
+            catch
+            {
+                return products;
+            }
+        }
+
 
     }
 }

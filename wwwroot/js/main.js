@@ -1,12 +1,17 @@
 
 
-var Popof = document.getElementById("#PopupF");
-var PopupIMG = document.getElementById("#popImg");
+var Popof = document.getElementById("PopupF");
+var gridf = document.getElementById("gridF");
+var PopupIMG = document.getElementById("popImg");
 
 function OnPopup(link) {
 
 	Popof.style.display = "initial";
+	Popof.style.visibility = "visible";
 	PopupIMG.src = link;
+
+	gridf.innerHTML += ` <img src="${link}" style="width: 100%"`;
+
 
 }
 
