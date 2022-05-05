@@ -19,6 +19,21 @@
 </a>
 
 
+<style>
+    .cart_Open{
+    margin-bottom: 20px; 
+}
+.cart_Open a{
+    background: #34f217;
+    padding: 16px;
+    color: #fff;
+    font-family: cursive;
+    text-decoration: none;
+
+}
+
+</style>
+
 
     
    
@@ -204,14 +219,14 @@
             <div class="row">
 
                 <div class="cart_Open">
-                    <a href="https://sibahleshop.asurewebsite.net" >Open Shop</a>
+                    <a href="https://sibahleshop.azurewebsites.net" >Open Shop</a>
                 </div>
                 
-                <div class="SlideCards">
+                <div class="SlideCards" style="display: inline-flex; overflow: auto; margin: 13px;">
                     @foreach(var i in ViewBag.Products){
 
-                    <div class="SlideCard">
-                        <img src="@i.Image" />
+                    <div class="SlideCard" style="width: 300px; margin: 10px;">
+                        <img src="@i.Image" style="height: 320px; width: 100%; margin-bottom: 9px;" />
                         <p>@i.Name</p>
                        
                     </div>
