@@ -1,11 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+ 
 }
-<a href="whatsapp://send?phone=27768103643">
+<a href="https://sibahleshop.azurewebsites.net">
     
 <button class="popAppa" type="submit">
 
-   <img src="~/images/apps.png"  alt="app" />
+   <img src="~/images/trolley.png"  alt="app" />
 </button>
 </a>
 
@@ -24,7 +25,7 @@
     margin-bottom: 20px; 
 }
 .cart_Open a{
-    background: #34f217;
+    background: #f8f8f8;
     padding: 16px;
     color: #fff;
     font-family: cursive;
@@ -91,6 +92,10 @@
             <p class="desc-text">Sibahlenkosini is a Decor, Catering and Transportation company founded in 2006. We offer professional services towards the success of your event. </p>
         </div>
         <div class="col-md-6 wow slideInRight" data-wow-duration="1.0s" data-wow-delay="0.5s">
+             <div class="cart_Open">
+                    <a asp-controller="Home" asp-action="Gallery" >Open Gallery</a>
+                </div>
+
             <div class="img-section ">
                 <img src="images/cat1.jpg" width="250" height="220">
                 <img src="images/cat2.jpg" width="250" height="220">
@@ -221,21 +226,80 @@
                 <div class="cart_Open">
                     <a href="https://sibahleshop.azurewebsites.net" >Open Shop</a>
                 </div>
-                
+                <!--
                 <div class="SlideCards" style="display: inline-flex; overflow: auto; margin: 13px;">
-                    @foreach(var i in ViewBag.Products){
+                    foreach(var i in ViewBag.Products){
 
                     <div class="SlideCard" style="width: 300px; margin: 10px;">
-                        <img src="@i.Image" style="height: 320px; width: 100%; margin-bottom: 9px;" />
-                        <p>@i.Name</p>
+                        <img src="i.Image" style="height: 320px; width: 100%; margin-bottom: 9px;" />
+                        <p>i.Name</p>
                        
                     </div>
                     }
+                    -->
 
-                    
+                    <div class="col-md-6 wow slideInLeft" data-wow-duration="1.0s" data-wow-delay="0.4s">
+            <ul class="image_box_story2">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        @{
+                            var list = ViewBag.Products as List<Product>;
+
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    for(var itm = 1; itm < list.Count; itm++)
+                                    {
+                                        <li data-target="#carousel-example-generic" data-slide-to="0"></li>
+                                    }
+
+                                   
+                                }
+                        
+                        
+                      
+                        
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                       
+
+                          @{  
+
+                            <div class="item active">
+                            <img src="@list[0].Image"  alt="...">
+                            <div class="carousel-caption">
+                                <h3>@list[0].Name</h3>
+                                
+                            </div>
+                        </div>
+
+                                  foreach(var i in list.Reverse<Product>()){
+                            <div class="item">
+                                <img src="@i.Image" style="height: 150px;"  alt="...">
+                                <div class="carousel-caption">
+                                    <h3>@i.Name</h3>
+                                
+                                </div>
+                            </div>
+                       
+                            }
+                        }
+                        
+
+                       
+                        
+                      
+
+                    </div>
+                </div>
+            </ul>
+        </div>
 
                  
                 </div>
+
+              
 
                
             </div>
@@ -651,3 +715,9 @@
 </section>
 
 
+
+
+
+@{
+      
+}

@@ -911,7 +911,7 @@ MEDIA QUERIE DESKTOP
     background: transparent;
     border: none;
     z-index: 300000000000;
-    visibility: hidden;
+    
 
 }
 .popAppa {
@@ -920,10 +920,11 @@ MEDIA QUERIE DESKTOP
     height: 40px;
     position: fixed;
     bottom: 40px;
-    left: 40px;
+    left: 30px;
     background: transparent;
     border: none;
-    z-index: 0900000000000;
+    z-index: 0900000000000; 
+    animation: Bump 1s ease-in-out 3 normal;
 }
 
     .popAppa img {
@@ -941,6 +942,34 @@ MEDIA QUERIE DESKTOP
     width: 100%;
 }
 
+@keyframes Bump {
+    0%,100%{
+        transform: scale(1);
+    }
+   25%{
+        transform: scale(1.1);
+    }
+   50%{
+       transform: scale(1);
+       
+   }
+   51%{
+       transform: rotate(-15deg);
+   }
+   60%{
+       transform: rotate(15deg);
+   }
+   70%{
+       transform: rotate(15deg);
+   }
+   80%{
+       transform: rotate(-15deg);
+   }
+   90%{
+       transform: scale(0.9);
+   }
+   
+}
 
 @media (max-width: 700px){
 
@@ -1082,14 +1111,13 @@ MEDIA QUERIE DESKTOP
 .cart_Open{
     margin-bottom: 20px; 
 }
-.cart_Open a{
-    background: #34f217;
-    padding: 16px;
-    color: #fff;
-    font-family: cursive;
-    text-decoration: none;
-
-}
+    .cart_Open a {
+        background: #f8f8f8;
+        padding: 16px;
+        color: #fff;
+        font-family: cursive;
+        text-decoration: none;
+    }
 
 
 
