@@ -2,36 +2,91 @@
     ViewData["Title"] = "Home Page";
  
 }
-<a href="https://sibahleshop.azurewebsites.net">
-    
-<button class="popAppa" type="submit">
-
-   <img src="~/images/trolley.png"  alt="app" />
-</button>
-</a>
 
 
-<a href="whatsapp://send?phone=27768103643">
-    
-<button class="popApp" type="submit">
 
-    <img src="~/images/apps.png"  alt="app" />
-</button>
-</a>
 
 
 <style>
+
+    .Cslide_container{
+    display: inline-flex;
+    overflow-x: scroll;
+    overflow-wrap: normal;
+    width: 100vw;
+    margin: 0;
+    cursor: pointer;
+    scrollbar-track-color: transparent;
+    scrollbar-arrow-color: transparent;
+    scrollbar-face-color: transparent;
+}
+
+
     .cart_Open{
     margin-bottom: 20px; 
 }
 .cart_Open a{
-    background: #f8f8f8;
+    background: #183019;
     padding: 16px;
     color: #fff;
     font-family: cursive;
     text-decoration: none;
 
 }
+
+ .cslide{
+        margin: 10px;
+    }
+    .cslide img{
+        height: 250px;
+        width: 280px;
+    }
+
+
+
+.ccover {
+    margin: 0px;
+    padding: 10px;
+    width: 100vw;
+    
+    overflow-wrap: normal;
+    overflow: hidden;
+}
+
+.popApp{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: transparent;
+    border: none;
+    z-index: 300000000000;
+    
+
+}
+.popAppa {
+   
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 40px;
+    left: 30px;
+    background: transparent;
+    border: none;
+    z-index: 900000000000; 
+    animation: Bump 1s ease-in-out 3 normal;
+}
+
+    .popAppa img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .popApp img {
+        width: 60px;
+        height: 60px;
+    }
 
 </style>
 
@@ -86,12 +141,12 @@
 
 <section id="story" class="description_content">
     <div class="text-content container">
-        <div class="col-md-6 wow slideInLeft" data-wow-duration="1.0s" data-wow-delay="0.3s">
+        <div class="col-md-6" >
             <h1>About us</h1>
             <div class="fa fa-cutlery fa-2x"></div>
             <p class="desc-text">Sibahlenkosini is a Decor, Catering and Transportation company founded in 2006. We offer professional services towards the success of your event. </p>
         </div>
-        <div class="col-md-6 wow slideInRight" data-wow-duration="1.0s" data-wow-delay="0.5s">
+        <div class="col-md-6 " >
              <div class="cart_Open">
                     <a asp-controller="Home" asp-action="Gallery" >Open Gallery</a>
                 </div>
@@ -113,7 +168,7 @@
 <section  class="description_content">
    
     <div class="text-content container">
-        <div class="col-md-6 wow slideInRight" data-wow-duration="1.0s" data-wow-delay="0.4s">
+        <div class="col-md-6">
             <h1 >Meet our Best Team!</h1>
             <div class="icon-cake fa-2x" style=""></div>
             <p class="desc-text"> We Present to you the team that pursues the dreams of our happy customers into reality. Our hard law is to always stay happy.</p>
@@ -140,7 +195,7 @@
             </div>
 
         </div>
-        <div class="col-md-6 wow slideInLeft" style="margin-top: 15px;" data-wow-duration="1.0s" data-wow-delay="0.4s">
+        <div class="col-md-6" style="margin-top: 15px;">
             <ul class="image_box_story2">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -219,12 +274,12 @@
     <div class="pricing background_content">
         <h1 class=" wow slideInLeft" data-wow-duration="1.0s" data-wow-delay="0.1s"><span>Premium</span> Decor</h1>
     </div>
-    <div class="text-content container">
-        <div class="container">
+    <div class="text-content container ccover">
+        <div class="container ">
             <div class="row">
 
                 <div class="cart_Open">
-                    <a href="https://sibahleshop.azurewebsites.net" >Open Shop</a>
+                    <a href="https://www.shop.sibahlenkosini.co.za" >Open Shop</a>
                 </div>
                 <!--
                 <div class="SlideCards" style="display: inline-flex; overflow: auto; margin: 13px;">
@@ -238,12 +293,14 @@
                     }
                     -->
 
+
+                    <!---
                     <div class="col-md-6 wow slideInLeft" data-wow-duration="1.0s" data-wow-delay="0.4s">
             <ul class="image_box_story2">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
+                    
                     <ol class="carousel-indicators">
-                        @{
+                        {
                             var list = ViewBag.Products as List<Product>;
 
                                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -260,25 +317,25 @@
                         
                     </ol>
 
-                    <!-- Wrapper for slides -->
+                    
                     <div class="carousel-inner">
                        
 
-                          @{  
+                          {  
 
                             <div class="item active">
-                            <img src="@list[0].Image"  alt="...">
+                            <img src="list[0].Image"  alt="..."> 
                             <div class="carousel-caption">
-                                <h3>@list[0].Name</h3>
+                                <h3>list[0].Name</h3> 
                                 
                             </div>
                         </div>
 
                                   foreach(var i in list.Reverse<Product>()){
                             <div class="item">
-                                <img src="@i.Image" style="height: 150px;"  alt="...">
+                                <img src="i.Image" style="height: 210px; width: 100%;"  alt="...">
                                 <div class="carousel-caption">
-                                    <h3>@i.Name</h3>
+                                    <h3>i.Name</h3>
                                 
                                 </div>
                             </div>
@@ -292,8 +349,39 @@
                       
 
                     </div>
+
+
+                  
+
+
+
                 </div>
             </ul>
+        </div>
+
+        -->
+
+
+        <div class="col-12 ">
+          <div class="Cslide_container" >
+
+              @{
+                   var list = ViewBag.Products as List<Product>;
+
+
+                  foreach(var i in list.Reverse<Product>()){
+
+                        <div class="cslide">
+                            <img src="@i.Image"  />
+                        </div>
+              }
+              }
+                       
+
+
+
+
+                    </div>
         </div>
 
                  
@@ -716,8 +804,22 @@
 
 
 
+<a href="https://www.shop.sibahlenkosini.co.za">
+    
+<button class="popAppa" type="submit">
+
+   <img src="~/images/trolley.png" style="width: 40px; height: 40px;" alt="app" />
+</button>
+</a>
 
 
-@{
-      
-}
+
+<a href="whatsapp://send?phone=27768103643">
+    
+<button class="popApp" type="submit">
+
+    <img src="~/images/apps.png"  alt="app" />
+</button>
+</a>
+
+

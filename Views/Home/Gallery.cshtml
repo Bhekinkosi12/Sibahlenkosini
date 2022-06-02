@@ -1,50 +1,19 @@
 ﻿@{
-   
+    Layout = "_Galle";
 }
+ <h1>Sibahlenkosini</h1>
 
- <header>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="row">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand"  href="#"><img src="../images/log.png"  />Sibahlenkosini</a>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                            <li><a class="navactive color_animation" href="#gridF">WELCOME</a></li>
-                            
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div>
-            </div><!-- /.container-fluid -->
-        </nav>
-    </header>
-
-
-<div class="masonry" style="background: #fff; margin-top: 50px;">
-    @foreach(var items in ViewBag.Medias){
-        <button style="border: none;" onclick="OnPopup(@items.Link)">
-
-  <div class="grid" id="gridF">
-    <img src="@items.Link" >
-    <div class="grid__body">
-      
-      <div class="mt-auto" >
-        <span class="grid__tag"></span>
-      </div>
+    <div class="gallery" id="gallery">
+         @foreach(var items in ViewBag.Medias){
+        <div class="gallery-item">
+            <div class="content"><img src="@items.Link" alt=""></div>
+        </div>
+         }
+       
     </div>
-  </div>
-        </button>
-    }
+     
+
+
 
 
   <!--
