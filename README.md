@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://sibahlenkosini2.azurewebsites.net"><img src="log.png" alt="Markdownify" width="200"></a>
+  <a href="https://sibahlenkosini.co.za"><img src="log.png" alt="Markdownify" width="200"></a>
   <br>
   SibahleNkosini
   <br>
@@ -10,6 +10,6 @@
 
 #Live Demo
 
-<a href="https://sibahlenkosini2.azurewebsites.net">
+<a href="https://sibahlenkosini.co.za">
       live Demo
   </a>
