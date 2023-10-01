@@ -23,3 +23,10 @@
 * Explore Available items
 * Add and sumit your cart with your items
 * help will be on your way
+  
+## Tools used
+
+* Asp dotnet mvc
+* javascript 
+* firebase database for demo
+* mangoDB for production 
